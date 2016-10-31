@@ -1,4 +1,4 @@
-FROM fabric8/fluentd:0.12.6
+FROM fabric8/fluentd:0.14.8
 
 MAINTAINER Gilbert Roulot <gilbert.roulot@tech-angels.com>
 
@@ -15,5 +15,6 @@ RUN mkdir -p /etc/fluent/plugin \
 
 ENV GELF_HOST graylog.default.svc.cluster.local
 ENV GELF_PORT 12900
+ENV OVH_TOKEN DEFAULT
 
 ADD fluent.conf /etc/fluent/fluent.conf
